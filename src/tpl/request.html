@@ -1,0 +1,42 @@
+<div navbar menu-title="SN AngularJS Template"></div>
+<div class="container content-container">
+	
+	<h1>
+	Request Page
+	</h1>
+	<div class="row">
+		<div class="col-xs-12">
+			<form class="git-search-form">
+				<div class="form-group">
+					<label class="form-control-label" for="gitSearch">
+						<h2>
+							Search github repository
+							
+						</h2>
+					</label>
+					<div class="input-group">
+						<input type="text" ng-model="q" ng-change="searchRepo(q)" class="form-control form-control-lg form-control-warning" id="gitSearch">
+						<span class="input-group-addon" id="total-count">Total: {{total}}</span>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="card-columns">
+				<!-- <div class="card-deck" ng-repeat="row in repos_rows" > -->
+					<div class="card" ng-repeat="repo in repos_rows">
+						<div class="card-block">
+							<h4 class="card-title">{{ repo.full_name }}</h4>
+							<p class="card-text">
+								{{ repo.description }}
+							</p>
+							<a href="{{repo.svn_url}}" target="_blank" class="card-link">Go to repo</a>
+						</div>
+					</div>
+				<!-- </div> -->
+			</div>
+		</div>
+	</div>
+</div>
