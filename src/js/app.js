@@ -17,10 +17,6 @@ function snConfig($urlRouterProvider, $stateProvider, $locationProvider) {
             controller: 'RequestCtrl',
         });
 
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
 }
 
 })();
